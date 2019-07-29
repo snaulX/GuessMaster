@@ -14,5 +14,8 @@
 				<MenuItem x:Name="SaveFile" Margin="2" Header="Save" FontSize="20" />
 			</MenuItem>
 		</Menu>
-    </Grid>
+		<Grid x:Name="WorkField" Margin="0,40,0,0">
+			
+		</Grid>
+	</Grid>
 </Window>
