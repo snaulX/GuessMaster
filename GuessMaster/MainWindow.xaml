@@ -15,7 +15,8 @@
 			</MenuItem>
 		</Menu>
 		<Grid x:Name="WorkField" Margin="0,40,0,0">
-			
+			<TextBox x:Name="Question" Margin="50, 10, 50, 30" FontSize="18px" Grid.Row="0">Write your question</TextBox>
+			<TextBox x:Name="Answer1" Margin="100, 30, 100, 15" Grid.Row="1" FontSize="16px"></TextBox>
 		</Grid>
 	</Grid>
 </Window>
