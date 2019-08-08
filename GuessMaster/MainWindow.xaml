@@ -14,7 +14,7 @@
 				<MenuItem x:Name="SaveFile" Margin="2" Header="Save" FontSize="20" />
 			</MenuItem>
 		</Menu>
-		<Grid x:Name="WorkField" Margin="0,40,0,0" ShowGridLines="True">
+		<Grid x:Name="WorkField" Margin="0,40,0,0">
 			<Grid.RowDefinitions>
 				<RowDefinition></RowDefinition>
 				<RowDefinition></RowDefinition>
@@ -27,6 +27,7 @@
 				<ColumnDefinition></ColumnDefinition>
 			</Grid.ColumnDefinitions>
 			<TextBox x:Name="Question" FontSize="18px" Grid.Row="0" Grid.ColumnSpan="4">Write your question</TextBox>
+			<CheckBox Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
 			<TextBox x:Name="Answer1" Grid.Row="1" FontSize="16px" Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 20">
 				Write your case
 			</TextBox>
