@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GuessMaster"
+        xmlns:local="clr-namespace:GuessMaster.widgets"
         mc:Ignorable="d"
         WindowState="Maximized">
     <Grid>
@@ -31,7 +31,10 @@
 			<TextBox x:Name="Answer1" Grid.Row="1" FontSize="16px" Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 20">
 				Write your case
 			</TextBox>
-			<Button x:Name="NextButton" Grid.Column="2" Grid.Row="3" Margin="10, 30">Next</Button>
+			<local:BottomButton x:Name="PrevButton" Grid.Column="1" Grid.Row="3">Previous</local:BottomButton>
+			<local:BottomButton x:Name="NextButton" Grid.Column="2" Grid.Row="3">Next</local:BottomButton>
+			<local:BottomButton x:Name="AddQuestButton" Grid.Column="0" Grid.Row="3">Add Question</local:BottomButton>
+			<local:BottomButton x:Name="RemoveQuestButton" Grid.Column="3" Grid.Row="3">Remove Question</local:BottomButton>
 		</Grid>
 	</Grid>
 </Window>
