@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuessMaster.widgets"
         mc:Ignorable="d"
-        WindowState="Maximized">
-    <Grid>
+        WindowState="Maximized" Icon="pack://application:,,,/Resources/mainicon.png">
+	<Grid>
 		<Menu Height="40" VerticalAlignment="Top" x:Name="MainMenu">
 			<MenuItem x:Name="File" Margin="0" Header="File" FontSize="25">
 				<MenuItem x:Name="NewFile" Margin="2" Header="New" FontSize="20" />
