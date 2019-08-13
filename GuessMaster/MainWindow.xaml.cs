@@ -54,5 +54,33 @@ namespace GuessMaster
 
             }
         }
+
+        private void AddQuestButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (WorkField.RowDefinitions.Count >= 7)
+            {
+                MessageBox.Show("You cannot create more than 5 questions", "CreateError", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            WorkField.RowDefinitions.Add(new RowDefinition());
+            int len = WorkField.RowDefinitions.Count - 1;
+            CheckBox checkBox = new CheckBox
+            {
+                Name = "Right" + len,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+            };
+            Grid.SetRow(checkBox, len);
+            WorkField.Children.Add(checkBox);
+            TextBox textBox = new TextBox
+            {
+                Name = "Answer" + len,
+                FontSize = 16,
+                Margin = new Thickness(0, 20, 0, 20)
+            };
+            Grid.SetRow(textBox, len);
+            Grid.SetColumnSpan(textBox, 2);
+            WorkField.Children.Add(textBox);
+        }
     }
 }
