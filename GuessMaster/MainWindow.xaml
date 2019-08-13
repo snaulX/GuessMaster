@@ -14,11 +14,11 @@
 				<MenuItem x:Name="SaveFile" Margin="2" Header="Save" FontSize="20" />
 			</MenuItem>
 		</Menu>
-		<Grid x:Name="WorkField" Margin="0,40,0,0" ScrollViewer.CanContentScroll="True">
+		<Grid x:Name="WorkField" Margin="0,40,0,0">
 			<Grid.RowDefinitions>
 				<RowDefinition></RowDefinition>
 				<RowDefinition></RowDefinition>
-				<RowDefinition x:Name="NavigationButtons"></RowDefinition>
+				<RowDefinition></RowDefinition>
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition></ColumnDefinition>

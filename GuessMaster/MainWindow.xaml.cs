@@ -63,7 +63,7 @@ namespace GuessMaster
                 return;
             }
             WorkField.RowDefinitions.Add(new RowDefinition());
-            int len = WorkField.RowDefinitions.Count - 1;
+            int len = WorkField.RowDefinitions.Count - 2;
             CheckBox checkBox = new CheckBox
             {
                 Name = "Right" + len,
@@ -76,11 +76,17 @@ namespace GuessMaster
             {
                 Name = "Answer" + len,
                 FontSize = 16,
-                Margin = new Thickness(0, 20, 0, 20)
+                Margin = new Thickness(0, 20, 0, 20),
+                Text = "Write your new case"
             };
             Grid.SetRow(textBox, len);
+            Grid.SetColumn(textBox, 1);
             Grid.SetColumnSpan(textBox, 2);
             WorkField.Children.Add(textBox);
+            Grid.SetRow(PrevButton, len + 1);
+            Grid.SetRow(NextButton, len + 1);
+            Grid.SetRow(AddQuestButton, len + 1);
+            Grid.SetRow(RemoveQuestButton, len + 1);
         }
     }
 }
