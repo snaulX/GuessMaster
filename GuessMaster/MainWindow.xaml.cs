@@ -88,5 +88,21 @@ namespace GuessMaster
             Grid.SetRow(AddQuestButton, len + 1);
             Grid.SetRow(RemoveQuestButton, len + 1);
         }
+
+        private void RemoveQuestButton_Click(object sender, RoutedEventArgs e)
+        {
+            int len = WorkField.RowDefinitions.Count;
+            if (len <= 3)
+            {
+                MessageBox.Show("You cannot remove lower than 1 question", "RemoveError", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            WorkField.RowDefinitions.RemoveAt(len - 2);
+            foreach (UIElement element in WorkField.Children)
+            {
+                if (Grid.GetRow(element) == len - 2)
+                    Grid.SetRow(element, len - 1); //while in debugging
+            }
+        }
     }
 }

@@ -34,7 +34,7 @@
 			<local:BottomButton x:Name="PrevButton" Grid.Column="1" Grid.Row="7">Previous</local:BottomButton>
 			<local:BottomButton x:Name="NextButton" Grid.Column="2" Grid.Row="7">Next</local:BottomButton>
 			<local:BottomButton x:Name="AddQuestButton" Grid.Column="0" Grid.Row="7" Click="AddQuestButton_Click">Add Question</local:BottomButton>
-			<local:BottomButton x:Name="RemoveQuestButton" Grid.Column="3" Grid.Row="7">Remove Question</local:BottomButton>
+			<local:BottomButton x:Name="RemoveQuestButton" Grid.Column="3" Grid.Row="7" Click="RemoveQuestButton_Click">Remove Question</local:BottomButton>
 		</Grid>
 	</Grid>
 </Window>
