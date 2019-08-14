@@ -97,12 +97,12 @@ namespace GuessMaster
                 MessageBox.Show("You cannot remove lower than 1 question", "RemoveError", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            WorkField.RowDefinitions.RemoveAt(len - 2);
             foreach (UIElement element in WorkField.Children)
             {
                 if (Grid.GetRow(element) == len - 2)
-                    Grid.SetRow(element, len - 1); //while in debugging
+                    Grid.SetRow(element, len - 3); //while in debugging
             }
+            WorkField.RowDefinitions.RemoveAt(len - 2);
         }
     }
 }
