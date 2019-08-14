@@ -43,15 +43,12 @@ namespace GuessMaster
                 Filter = "Guess files|*.guess",
                 DefaultExt = $"{fileName}.guess"
             };
-            dialog.ShowDialog();
-            dialog.FileOk += SaveDialog_FileOk;
-        }
-
-        private void SaveDialog_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            using (BinaryWriter writer = new BinaryWriter(System.IO.File.OpenWrite(fileName)))
+            if ((bool)dialog.ShowDialog())
             {
-
+                using (BinaryWriter writer = new BinaryWriter(File.Open(dialog.FileName, FileMode.OpenOrCreate)))
+                {
+                    //pass
+                }
             }
         }
 

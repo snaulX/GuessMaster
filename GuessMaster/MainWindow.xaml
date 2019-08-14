@@ -8,7 +8,7 @@
         WindowState="Maximized">
 	<Grid>
 		<Menu Height="40" VerticalAlignment="Top" x:Name="MainMenu">
-			<MenuItem x:Name="File" Margin="0" Header="File" FontSize="25">
+			<MenuItem x:Name="FileMenu" Margin="0" Header="File" FontSize="25">
 				<MenuItem x:Name="NewFile" Margin="2" Header="New" FontSize="20" />
 				<MenuItem x:Name="OpenFile" Margin="2" Header="Open" FontSize="20" />
 				<MenuItem x:Name="SaveFile" Margin="2" Header="Save" FontSize="20" />
