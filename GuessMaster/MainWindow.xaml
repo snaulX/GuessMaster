@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuessMaster.widgets"
         mc:Ignorable="d"
-        WindowState="Maximized">
+        WindowState="Maximized" Icon="Resources/mainicon.png">
 	<Grid>
 		<Menu Height="40" VerticalAlignment="Top" x:Name="MainMenu">
 			<MenuItem x:Name="FileMenu" Margin="0" Header="File" FontSize="25">
@@ -33,8 +33,8 @@
 			</TextBox>
 			<local:BottomButton x:Name="PrevButton" Grid.Column="1" Grid.Row="7">Previous</local:BottomButton>
 			<local:BottomButton x:Name="NextButton" Grid.Column="2" Grid.Row="7">Next</local:BottomButton>
-			<local:BottomButton x:Name="AddQuestButton" Grid.Column="0" Grid.Row="7" Click="AddQuestButton_Click">Add Question</local:BottomButton>
-			<local:BottomButton x:Name="RemoveQuestButton" Grid.Column="3" Grid.Row="7" Click="RemoveQuestButton_Click">Remove Question</local:BottomButton>
+			<local:BottomButton x:Name="AddCaseButton" Grid.Column="0" Grid.Row="7" Click="AddCaseButton_Click">Add Case</local:BottomButton>
+			<local:BottomButton x:Name="RemoveCaseButton" Grid.Column="3" Grid.Row="7" Click="RemoveCaseButton_Click">Remove Case</local:BottomButton>
 		</Grid>
 	</Grid>
 </Window>

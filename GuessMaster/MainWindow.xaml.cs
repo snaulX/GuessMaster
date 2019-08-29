@@ -52,11 +52,11 @@ namespace GuessMaster
             }
         }
 
-        private void AddQuestButton_Click(object sender, RoutedEventArgs e)
+        private void AddCaseButton_Click(object sender, RoutedEventArgs e)
         {
             if (WorkField.RowDefinitions.Count >= 7)
             {
-                MessageBox.Show("You cannot create more than 5 questions", "CreateError", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("You cannot create more than 5 cases", "CreateError", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             WorkField.RowDefinitions.Add(new RowDefinition());
@@ -82,22 +82,22 @@ namespace GuessMaster
             WorkField.Children.Add(textBox);
             Grid.SetRow(PrevButton, len + 1);
             Grid.SetRow(NextButton, len + 1);
-            Grid.SetRow(AddQuestButton, len + 1);
-            Grid.SetRow(RemoveQuestButton, len + 1);
+            Grid.SetRow(AddCaseButton, len + 1);
+            Grid.SetRow(RemoveCaseButton, len + 1);
         }
 
-        private void RemoveQuestButton_Click(object sender, RoutedEventArgs e)
+        private void RemoveCaseButton_Click(object sender, RoutedEventArgs e)
         {
             int len = WorkField.RowDefinitions.Count;
             if (len <= 3)
             {
-                MessageBox.Show("You cannot remove lower than 1 question", "RemoveError", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("You cannot remove lower than 1 case", "RemoveError", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             foreach (UIElement element in WorkField.Children)
             {
                 if (Grid.GetRow(element) == len - 2)
-                    Grid.SetRow(element, len - 3); //while in debugging
+                    Grid.SetRow(element, len - 3);
             }
             WorkField.RowDefinitions.RemoveAt(len - 2);
         }
