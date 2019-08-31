@@ -8,9 +8,9 @@ using System.Windows;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("GuessMaster")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("GuessMaster - is the constructor of the quizes")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("snaulX")]
 [assembly: AssemblyProduct("GuessMaster")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
