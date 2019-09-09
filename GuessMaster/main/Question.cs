@@ -17,23 +17,26 @@ namespace GuessMaster.main
             cases = new Dictionary<string, bool>();
         }
 
-        public string ToByteCode()
+        public string ToByteCode
         {
-            string result = "<:::\00xQ::" + question + ':' + cases.Count + ";\0";
-            foreach (KeyValuePair<string, bool> pair in cases)
+            get
             {
-                result += "0xQQ:::" + pair.Key + ":::(a)\0-\0";
-                if (pair.Value)
+                string result = "<:::\00xQ::" + question + ':' + cases.Count + ";\0";
+                foreach (KeyValuePair<string, bool> pair in cases)
                 {
-                    result += "\\o";
+                    result += "0xQQ:::" + pair.Key + ":::(a)\0-\0";
+                    if (pair.Value)
+                    {
+                        result += "\\o";
+                    }
+                    else
+                    {
+                        result += "\\g";
+                    }
+                    result += "\0%;";
                 }
-                else
-                {
-                    result += "\\g";
-                }
-                result += "\0%;";
+                return result + "kjlkm:::>";
             }
-            return result + "kjlkm:::>";
         }
     }
 }
